@@ -1,7 +1,10 @@
 import React from 'react'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
 export default function App() {
-  return (
-    <div><h1 className='text-red-800'>App</h1></div>
-  )
+  return <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </BrowserRouter>;
 }
